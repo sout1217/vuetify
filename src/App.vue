@@ -68,28 +68,21 @@
 </template>
 
 <script>
+import routes from '@/router/routes'
 export default {
   name: 'App',
 
   data() {
     return {
-      items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
-        { title: 'Grid System', icon: 'mdi-image', to: '/grid-system' },
-        { title: 'Grid List Page', icon: 'mdi-image', to: '/grid-list-page' },
-        { title: 'BreakPoint Service', icon: 'mdi-image', to: '/break-points' },
-        { title: 'Typography', icon: 'mdi-image', to: '/typography' },
-        { title: 'Colors', icon: 'mdi-image', to: '/colors' },
-      ],
+      items: routes.map(route => ({
+        title: route.name,
+        icon: 'mdi-image',
+        to: route.path,
+      })),
       right: null,
       drawer: true,
       group: null,
     }
-  },
-  watch: {
-    group() {
-      this.drawer = false
-    },
   },
 }
 </script>
