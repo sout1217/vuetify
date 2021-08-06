@@ -3,7 +3,7 @@
     <!--
     Vuetify 의 그리드 시스템은 Flex Box 로 구성되어있다
     Container, Row, Gutters, Margin 으로 구성된다
-    
+
     <v-row no-gutters> :  v-row직계 v-col자식 에서 음수 여백 과 패딩을 제거할 수 있습니다 .
     <v-spacer /> : 빈 col 공간
     <v-row align="end"> : align-contents: end
