@@ -79,6 +79,7 @@ export default {
         { title: 'Grid List Page', icon: 'mdi-image', to: '/grid-list-page' },
         { title: 'BreakPoint Service', icon: 'mdi-image', to: '/break-points' },
         { title: 'Typography', icon: 'mdi-image', to: '/typography' },
+        { title: 'Colors', icon: 'mdi-image', to: '/colors' },
       ],
       right: null,
       drawer: true,

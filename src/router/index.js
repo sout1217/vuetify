@@ -5,6 +5,7 @@ import GridSystem from '@/views/GridSystem'
 import GridListPage from '@/views/GridListPage'
 import Breakpoints from '@/views/Breakpoints'
 import Typography from '@/views/Typography'
+import Colors from '@/views/Colors'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/typography',
     name: 'Typography',
     component: Typography,
+  },
+  {
+    path: '/colors',
+    name: 'Colors',
+    component: Colors,
   },
 ]
 
