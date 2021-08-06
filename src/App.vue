@@ -1,90 +1,30 @@
 <template>
+  <!-- Layout -->
+  <!-- v-app 최상단에 있어야 한다 (id="app")-->
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <!-- app 속성은 초기화 설정이라고 보면 된다 -->
+    <!-- 안적어주면 요상하게 화면 반을 차지함.. -->
+    <!-- xsOnly 는 모바일 화면일 때만 보여주게 설정한 것이다 -->
+    <!-- only 이외에 up 과 down 이 있으며 해당 사이즈 이하 이상이라고 생각하면 된다 -->
+    <v-app-bar app v-if="$vuetify.breakpoint.xsOnly" />
 
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-navigation-drawer app v-model="drawer">
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6"> Application</v-list-item-title>
-          <v-list-item-subtitle> subtext</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
-
-      <v-list dense nav>
-        <v-list-item v-for="item in items" :key="item.title" link :to="item.to">
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ item.title }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
+    <!-- 레이아웃을 제외한 컨텐츠 영역을 나타낸다 (main 태그로 치환댐)-->
+    <!-- 다른 레이아웃 컴포넌트(v-app-bar)들이 너비와 높이가 코어에 값이 저장되고 난 뒤
+    그 값과 계산하여 적절한 너비와 높이를 제공해주는 컴포넌트이다 -->
+    <!-- v-main 을 적지 않는 경우 내용이 v-app-bar 의 높이를 height:0 부터 시작하여 v-app-bar 에
+    가려지게 된다 (absolut 와 z-index 가 높기 때문..) -->
+    <!-- v-main 에 대해서 padding-top 을 보면 v-app-bar 만큼의 높이만큼이 떨어진 것을 확인이 가능하다 -->
     <v-main>
-      <router-view />
+      <v-container> 컨텐츠 영역 </v-container>
     </v-main>
+    <v-footer app />
   </v-app>
 </template>
 
 <script>
 export default {
   name: 'App',
-
-  data() {
-    return {
-      items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
-        { title: 'Grid System', icon: 'mdi-image', to: '/grid-system' },
-        { title: 'Grid List Page', icon: 'mdi-image', to: '/grid-list-page' },
-      ],
-      right: null,
-      drawer: true,
-      group: null,
-    }
-  },
-  watch: {
-    group() {
-      this.drawer = false
-    },
-  },
 }
 </script>
+
+<style scoped></style>
