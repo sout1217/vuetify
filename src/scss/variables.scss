@@ -1,0 +1,35 @@
+// https://vuetifyjs.com/en/features/sass-variables/#variable-api
+// 1. sass or scss or styles 디렉토리를 src 폴더에 생성
+// 2. variables.scss or variables.sass 라는 파일 생성
+// 3. vuetify loader 가 자동으로 찾아 기본 설정을 오버라이딩한다
+// 4. 기타 자세한 설정은 카테고리 메뉴 API메뉴를 통하여 원하는 컴포넌트를 클릭해서 variables 를 확인할 수 있다
+
+// Globals
+$body-font-family: 'Nanum Gothic', serif;
+$border-radius-root: 6px;
+$font-size-root: 14px;
+
+// Variables must come before the import
+$btn-letter-spacing: 0;
+$btn-font-weight: 400;
+$list-item-title-font-size: 0.929rem;
+$list-item-dense-title-font-size: 0.929rem;
+$list-item-dense-title-font-weight: initial;
+$fab-icon-sizes: (
+        'small': 20
+);
+$btn-sizes: (
+        'default': 41,
+        'large': 54
+);
+
+$headings: (
+        'h1': (
+                'size': 3.3125rem,
+                'line-height': 1.15em
+        ),
+        'h2': (
+                'size': 2.25rem,
+                'line-height': 1.5em
+        )
+);
