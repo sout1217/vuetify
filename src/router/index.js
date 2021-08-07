@@ -9,4 +9,10 @@ const router = new VueRouter({
   routes,
 })
 
+router.afterEach(to => {
+  Vue.nextTick(() => {
+    document.title = to.meta?.title || to.name
+  })
+})
+
 export default router
