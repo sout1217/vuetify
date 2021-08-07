@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ProductItem from '@/components/ProductItem'
+import ProductItem from '@/views/components/ProductItem'
 export default {
   name: 'ProductList',
   components: { ProductItem },

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import PageBar from '@/layouts/page/AppBar'
+import PageBar from '@/views/layouts/page/app-bar/AppBar'
 export default {
   name: 'PageLayout',
   components: {

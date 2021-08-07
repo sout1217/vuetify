@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import DefaultBar from '@/layouts/default/AppBar'
-import DefaultDrawer from '@/layouts/default/Drawer'
+import DefaultBar from '@/views/layouts/default/app-bar/AppBar'
+import DefaultDrawer from '@/views/layouts/default/drawer/Drawer'
 
 export default {
   name: 'DefaultLayout',

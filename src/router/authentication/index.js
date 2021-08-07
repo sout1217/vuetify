@@ -1,6 +1,6 @@
-import _AuthenticationLayout from '@/layouts/authentication/Index'
-import SignUp from '@/views/SignUp'
-import SignIn from '@/views/SignIn'
+import _AuthenticationLayout from '@/views/layouts/authentication/Index'
+import SignUp from '@/views/page/SignUp'
+import SignIn from '@/views/page/SignIn'
 
 export const AuthenticationLayout = {
   path: '/',

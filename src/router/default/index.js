@@ -1,11 +1,14 @@
-import _DefaultLayout from '@/layouts/default/Index'
-import Dashboard from '@/views/Dashboard'
-import GridSystem from '@/views/GridSystem'
-import GridListPage from '@/views/GridListPage'
-import Breakpoints from '@/views/Breakpoints'
-import Typography from '@/views/Typography'
-import Colors from '@/views/Colors'
-import HelperClass from '@/views/HelperClass'
+import _DefaultLayout from '@/views/layouts/default/Index'
+import Dashboard from '@/views/page/Dashboard'
+import GridSystem from '@/views/page/GridSystem'
+import GridListPage from '@/views/page/GridListPage'
+import Breakpoints from '@/views/page/Breakpoints'
+import Typography from '@/views/page/Typography'
+import Colors from '@/views/page/Colors'
+import HelperClass from '@/views/page/HelperClass'
+import Kotlin from '@/views/page/Kotlin'
+import Python from '@/views/page/Python'
+import Java from '@/views/page/Java'
 // icon : https://pictogrammers.github.io/@mdi/font/5.4.55/
 export const DefaultLayout = {
   path: '/',
@@ -48,6 +51,30 @@ export const DefaultLayout = {
       path: '/helper-class',
       name: 'HelperClass',
       component: HelperClass,
+    },
+    {
+      path: '/java',
+      name: 'JavaPage',
+      component: Java,
+      meta: {
+        isChild: true,
+      },
+    },
+    {
+      path: '/python',
+      name: 'PythonPage',
+      component: Python,
+      meta: {
+        isChild: true,
+      },
+    },
+    {
+      path: '/kotlin',
+      name: 'KotlinPage',
+      component: Kotlin,
+      meta: {
+        isChild: true,
+      },
     },
   ],
 }

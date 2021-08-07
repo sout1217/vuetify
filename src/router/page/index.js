@@ -1,5 +1,5 @@
-import _PageLayout from '@/layouts/page/Index'
-import ProductList from '@/views/ProductList'
+import _PageLayout from '@/views/layouts/page/Index'
+import ProductList from '@/views/page/ProductList'
 
 export const PageLayout = {
   path: '/',
