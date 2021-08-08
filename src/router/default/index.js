@@ -42,6 +42,11 @@ export const DefaultLayout = {
       component: () => import('@/views/page/HelperClass'),
     },
     {
+      path: '/form',
+      name: 'Form',
+      component: () => import('@/views/page/Form'),
+    },
+    {
       path: '/java',
       name: 'JavaPage',
       component: () => import('@/views/page/Java'),
