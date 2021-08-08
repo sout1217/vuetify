@@ -1,15 +1,18 @@
-import _AuthenticationLayout from '@/views/layouts/authentication/Index'
-import SignUp from '@/views/page/SignUp'
-import SignIn from '@/views/page/SignIn'
-
+// chunk 파일을 그룹핑 할 수 있다
 export const AuthenticationLayout = {
   path: '/',
-  component: _AuthenticationLayout,
+  component: () =>
+    import(
+      /* webpackChunkName "views-authentication */ '@/views/layouts/authentication/Index'
+    ),
   children: [
     {
       path: '/sign-up',
       name: 'SignUp',
-      component: SignUp,
+      component: () =>
+        import(
+          /* webpackChunkName "views-authentication */ '@/views/page/SignUp'
+        ),
       meta: {
         icon: 'mdi-login',
       },
@@ -17,7 +20,10 @@ export const AuthenticationLayout = {
     {
       path: '/sign-in',
       name: 'SignIn',
-      component: SignIn,
+      component: () =>
+        import(
+          /* webpackChunkName "views-authentication */ '@/views/page/SignIn'
+        ),
       meta: {
         icon: 'mdi-logout',
       },

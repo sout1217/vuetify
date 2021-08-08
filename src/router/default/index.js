@@ -1,23 +1,12 @@
-import _DefaultLayout from '@/views/layouts/default/Index'
-import Dashboard from '@/views/page/Dashboard'
-import GridSystem from '@/views/page/GridSystem'
-import GridListPage from '@/views/page/GridListPage'
-import Breakpoints from '@/views/page/Breakpoints'
-import Typography from '@/views/page/Typography'
-import Colors from '@/views/page/Colors'
-import HelperClass from '@/views/page/HelperClass'
-import Kotlin from '@/views/page/Kotlin'
-import Python from '@/views/page/Python'
-import Java from '@/views/page/Java'
 // icon : https://pictogrammers.github.io/@mdi/font/5.4.55/
 export const DefaultLayout = {
   path: '/',
-  component: _DefaultLayout,
+  component: () => import('@/views/layouts/default/Index'),
   children: [
     {
       path: '/',
       name: 'Dashboard',
-      component: Dashboard,
+      component: () => import('@/views/page/Dashboard'),
       meta: {
         icon: 'mdi-view-dashboard',
       },
@@ -25,37 +14,37 @@ export const DefaultLayout = {
     {
       path: '/grid-system',
       name: 'GridSystem',
-      component: GridSystem,
+      component: () => import('@/views/page/GridSystem'),
     },
     {
       path: '/grid-list-page',
       name: 'GridListPage',
-      component: GridListPage,
+      component: () => import('@/views/page/GridListPage'),
     },
     {
       path: '/break-points',
       name: 'BreakPoints',
-      component: Breakpoints,
+      component: () => import('@/views/page/Breakpoints'),
     },
     {
       path: '/typography',
       name: 'Typography',
-      component: Typography,
+      component: () => import('@/views/page/Typography'),
     },
     {
       path: '/colors',
       name: 'Colors',
-      component: Colors,
+      component: () => import('@/views/page/Colors'),
     },
     {
       path: '/helper-class',
       name: 'HelperClass',
-      component: HelperClass,
+      component: () => import('@/views/page/HelperClass'),
     },
     {
       path: '/java',
       name: 'JavaPage',
-      component: Java,
+      component: () => import('@/views/page/Java'),
       meta: {
         isChild: true,
       },
@@ -63,7 +52,7 @@ export const DefaultLayout = {
     {
       path: '/python',
       name: 'PythonPage',
-      component: Python,
+      component: () => import('@/views/page/Python'),
       meta: {
         isChild: true,
       },
@@ -71,7 +60,7 @@ export const DefaultLayout = {
     {
       path: '/kotlin',
       name: 'KotlinPage',
-      component: Kotlin,
+      component: () => import('@/views/page/Kotlin'),
       meta: {
         isChild: true,
       },
