@@ -12,10 +12,18 @@
             prepend-icon="mdi-lock-outline"
           />
 
-          <VCardText>
-            회원가입을 하실건가요?
-            <router-link to="/sign-up">회원가입</router-link>
-          </VCardText>
+          <v-card-text>
+            <p>
+              홈으로 이동하시겠습니까?
+              <router-link class="text-decoration-none" to="/">홈</router-link>
+            </p>
+            <p>
+              회원가입을 하실건가요?
+              <router-link class="text-decoration-none" to="/sign-up"
+                >회원가입</router-link
+              >
+            </p>
+          </v-card-text>
 
           <v-btn class="mt-5" block x-large rounded color="primary">
             로그인
