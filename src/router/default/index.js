@@ -47,6 +47,11 @@ export const DefaultLayout = {
       component: () => import('@/views/page/Form'),
     },
     {
+      path: '/table',
+      name: 'Table',
+      component: () => import('@/views/page/Table'),
+    },
+    {
       path: '/java',
       name: 'JavaPage',
       component: () => import('@/views/page/Java'),

@@ -106,12 +106,25 @@
         </validation-observer>
       </v-card-text>
     </v-card>
+
+    <v-card class="mt-5">
+      <v-card-text>
+        <app-text-field
+          label="커스텀 필드"
+          placeholder="사용자 커스텀 플레이스 홀더"
+          :outlined="true"
+          :dense="false"
+        />
+      </v-card-text>
+    </v-card>
   </v-container>
 </template>
 
 <script>
+import AppTextField from '@/views/components/app/TextField'
 export default {
   name: 'Form',
+  components: { AppTextField },
   data() {
     return {
       name: null,
